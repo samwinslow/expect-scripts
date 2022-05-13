@@ -1,0 +1,8 @@
+#!/usr/bin/expect -f
+
+if {[string length $::env(PROJECT_ID)] > 0} {
+  puts "Project ID set."
+} else {
+  puts "Project ID not set."
+  exit 1
+}
