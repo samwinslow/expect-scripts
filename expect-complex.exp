@@ -1,0 +1,12 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+spawn ./interactive-complex.sh
+
+expect "Do you like ice cream? (y/n)"
+send -- "y\n"
+
+expect "Would you like to proceed with deletion? Selecting no will continue the rest"
+send -- "n\n"
+
+expect eof
